@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">Project ID</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee: ${employee}">
+                    <td th:text="${employee.employeeId}"/>
+                    <td th:text="${employee.projectId}"/>
+                    <td th:text="${employee.dateFrom}"/>
+                    <td th:text="${employee.dateTo}"/>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    <div align="center" >
+        <form th:action="@{/button}" method="post">
+            <button type="submit" class="btn btn-primary btn-lg">View Paired Employees</button>
+        </form>
+
+    </div>
+
+
+</body>
+</html>
