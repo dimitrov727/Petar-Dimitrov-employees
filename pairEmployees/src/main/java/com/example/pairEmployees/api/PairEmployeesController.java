@@ -37,7 +37,6 @@ public class PairEmployeesController {
 
     @PostMapping("/button")
     public String myButton() {
-        System.out.println("Button clicked!");
         return "redirect:/pairedEmp";
     }
 }

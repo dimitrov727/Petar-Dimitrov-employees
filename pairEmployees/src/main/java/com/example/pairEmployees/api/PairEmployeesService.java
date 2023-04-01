@@ -53,8 +53,6 @@ public class PairEmployeesService implements IPairEmployeesService {
 
         }
         pairedEmpls = pairedEmpls.stream().distinct().collect(Collectors.toList());
-        pairedEmpls.forEach(System.out::println);
-        System.out.println(getDuplicatedEml());
 
         return pairedEmpls;
 
